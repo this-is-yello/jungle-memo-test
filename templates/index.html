@@ -19,14 +19,12 @@
                     success: function (res) {
                         alert(res.msg);
 
-                        // 입력값 비우기
                         $('#title').val('');
                         $('#content').val('');
 
-                        // 약간의 지연 후 새로고침
                         setTimeout(() => {
-                            showMemos();  // 💥 저장 끝나고 바로 다시 카드 전체를 그려줌
-                        }, 100);  // 딜레이는 0.1초면 충분
+                            showMemos();
+                        }, 100);
                     }
                 });
             }
@@ -117,7 +115,6 @@
                 });
             }
 
-            // 페이지 로딩 시 메모 불러오기
             $(document).ready(function () {
                 showMemos();
             });
